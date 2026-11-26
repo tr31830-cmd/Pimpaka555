@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My E-Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+:root{--bg:#171421;--card:#242033;--primary:#c4a5ff;--pink:#f3a9c8;--white:#fff;--muted:#bcb7c9}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Prompt',sans-serif;background:var(--bg);color:var(--white);line-height:1.7}
+header{position:fixed;top:0;width:100%;z-index:100;background:rgba(23,20,33,.95);backdrop-filter:blur(10px);padding:15px 8%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:23px;font-weight:700;color:var(--primary)}
+nav{display:flex;gap:25px}
+nav a{color:white;text-decoration:none;transition:.3s}
+nav a:hover{color:var(--pink)}
+section{padding:110px 10% 70px;scroll-margin-top:65px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.hero-text{max-width:600px}
+.hero h1{font-size:clamp(35px,6vw,58px);line-height:1.3;margin:15px 0}
+.hero h1 span{color:var(--primary)}
+.hero p{color:var(--muted);margin-bottom:25px}
+.tag{color:var(--pink);font-weight:500}
+.profile{width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--pink));display:flex;justify-content:center;align-items:center;font-size:90px;flex-shrink:0}
+.btn{display:inline-block;padding:12px 25px;background:var(--primary);color:#171421;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
+.btn:hover{transform:translateY(-4px);background:var(--pink)}
+.btn-outline{background:transparent;border:1px solid var(--primary);color:var(--primary);margin-left:10px}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:32px;color:var(--primary)}
+.section-title p{color:var(--muted)}
+.about-box{background:var(--card);padding:30px;border-radius:20px;max-width:850px;margin:auto}
+.about-box p{color:var(--muted)}
+.skills{display:flex;justify-content:center;flex-wrap:wrap;gap:15px}
+.skill{background:var(--card);padding:15px 30px;border-radius:12px;border:1px solid #403752;color:var(--pink);transition:.3s}
+.skill:hover{transform:translateY(-5px);border-color:var(--primary)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.project-card{background:var(--card);border-radius:18px;overflow:hidden;transition:.3s;border:1px solid #393348}
+.project-card:hover{transform:translateY(-8px)}
+.project-image{height:160px;background:linear-gradient(135deg,#9c7be8,#e9a7c9);display:flex;justify-content:center;align-items:center;font-size:55px}
+.project-content{padding:22px}
+.project-content h3{color:var(--primary);margin-bottom:10px}
+.project-content p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.project-content a{color:var(--pink);text-decoration:none}
+.contact-box{text-align:center;background:var(--card);padding:40px 20px;border-radius:20px}
+.contact-box p{color:var(--muted);margin:12px 0}
+.contact-box a{color:var(--pink);text-decoration:none}
+footer{text-align:center;padding:25px;color:var(--muted);background:#100e18}
+@media(max-width:900px){.projects{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){header{padding:12px 5%;flex-direction:column;gap:10px}nav{gap:13px;flex-wrap:wrap;justify-content:center}nav a{font-size:12px}section{padding:120px 6% 60px}.hero{flex-direction:column-reverse;text-align:center;justify-content:center}.profile{width:180px;height:180px;font-size:65px}.projects{grid-template-columns:1fr}.btn{margin:5px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">My Portfolio.</div>
+  <nav>
+    <a href="#home">หน้าแรก</a><a href="#about">เกี่ยวกับฉัน</a><a href="#skills">ทักษะ</a><a href="#projects">ผลงาน</a><a href="#contact">ติดต่อ</a>
+  </nav>
+</header>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="tag">WELCOME TO MY PORTFOLIO</div>
+    <h1>สวัสดีค่ะ ฉันชื่อ<br><span>ชื่อ-นามสกุล</span></h1>
+    <p>นักเรียนที่มีความสนใจด้านเทคโนโลยี การเขียนโปรแกรม และการพัฒนาเว็บไซต์ พร้อมเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ</p>
+    <a href="#projects" class="btn">ดูผลงานของฉัน</a>
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+  </div>
+  <div class="profile" aria-label="ไอคอนนักพัฒนา">👩🏻‍💻</div>
+</section>
+<section id="about">
+  <div class="section-title"><h2>About Me</h2><p>เกี่ยวกับตัวฉัน</p></div>
+  <div class="about-box"><p>สวัสดีค่ะ ฉันชื่อ ชื่อ-นามสกุล ปัจจุบันกำลังศึกษาอยู่ที่ โรงเรียนตัวอย่าง มีความสนใจเกี่ยวกับการเขียนโปรแกรม การออกแบบเว็บไซต์ และเทคโนโลยีสมัยใหม่ เป้าหมายของฉันคือการพัฒนาทักษะและสร้างผลงานที่มีประโยชน์ต่อผู้อื่น</p></div>
+</section>
+<section id="skills">
+  <div class="section-title"><h2>My Skills</h2><p>ทักษะและความสามารถ</p></div>
+  <div class="skills"><div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">Python</div><div class="skill">Web Design</div><div class="skill">Problem Solving</div></div>
+</section>
+<section id="projects">
+  <div class="section-title"><h2>My Projects</h2><p>ผลงานและโปรเจกต์ของฉัน</p></div>
+  <div class="projects">
+    <div class="project-card"><div class="project-image">🌐</div><div class="project-content"><h3>Personal Website</h3><p>เว็บไซต์แนะนำตัวเองที่พัฒนาด้วย HTML และ CSS พร้อมการออกแบบที่ทันสมัย</p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">ดูผลงานบน GitHub →</a></div></div>
+    <div class="project-card"><div class="project-image">💻</div><div class="project-content"><h3>JavaScript Project</h3><p>โปรแกรมตัวอย่างที่พัฒนาด้วย JavaScript เพื่อฝึกทักษะการเขียนโปรแกรมเบื้องต้น</p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">ดูผลงานบน GitHub →</a></div></div>
+    <div class="project-card"><div class="project-image">📚</div><div class="project-content"><h3>Library Database</h3><p>โปรเจกต์ตัวอย่างเกี่ยวกับการจัดการข้อมูลหนังสือและระบบห้องสมุด</p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">ดูผลงานบน GitHub →</a></div></div>
+  </div>
+</section>
+<section id="contact">
+  <div class="section-title"><h2>Contact Me</h2><p>ช่องทางการติดต่อ</p></div>
+  <div class="contact-box"><h3>Let's Connect!</h3><p>ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์ Portfolio ของฉัน</p><p>Email: <a href="mailto:your@email.com">your@email.com</a></p><p>GitHub: <a href="https://github.com/" target="_blank" rel="noopener noreferrer">My GitHub Profile</a></p></div>
+</section>
+<footer>© 2026 My E-Portfolio | Designed with HTML, CSS & JavaScript</footer>
+<script>
+document.querySelectorAll('nav a').forEach(link=>{
+  link.addEventListener('click',function(e){
+    const target=document.querySelector(this.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
+  });
+});
+console.log('Welcome to My E-Portfolio!');
+</script>
+</body>
+</html>
